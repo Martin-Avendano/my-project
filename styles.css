@@ -1,8 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
+:root {
+    --sidebar-bg: #11101d;
+    --sidebar-text: #fff;
+    --home-bg: #E4E9F7;
+    --home-text: #11101d;
+    --profile-bg: #1d1b31;
+    --hover-bg: #1d1b31;
+    --hover-button: #11101d;
+  
+}
+
+body.dark-mode {
+    --sidebar-bg: #f4f4f4;
+    --sidebar-text: #11101d;
+    --home-bg: #ffffff;
+    --home-text: #11101d;
+    --profile-bg: #e0e0e0;
+    --hover-bg: #c7c7c7;
+    --hover-button: #c7c7c7;
+    
+}
+
+
 #loginBody {
-    background: #1d1b31;;
+    background: var(--sidebar-bg);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -21,7 +44,7 @@ form {
 }
 
 h1 {
-    color: white;
+    color: var(--sidebar-text);
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
@@ -33,12 +56,12 @@ h1 {
 }
 
 .sidebar{
+    background: var(--sidebar-bg);
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 260px;
-    background: #11101d;
     z-index: 100;
     transition: all 0.5s ease;
 }
@@ -57,7 +80,7 @@ h1 {
 
 .sidebar .logo-details i{
    font-size: 30px;
-   color: #fff;
+   color: var(--sidebar-text);
    height: 50px;
    min-width: 78px;
    text-align : center;
@@ -66,7 +89,7 @@ h1 {
 
 .sidebar .logo-details .logo_name{
     font-size: 22px;
-    color: #fff;
+    color: var(--sidebar-text);
     font-weight: 600;
     transition: 0.3s ease;
     transition-delay: 0.1s;
@@ -101,7 +124,8 @@ h1 {
 }
 
 .sidebar .nav-links li:hover{
-    background: #1d1b31;
+    background: var(--hover-bg);
+    
 }
 
 .sidebar .nav-links li .icon-links{
@@ -119,7 +143,7 @@ h1 {
     min-width: 78px;
     text-align: center;
     line-height: 50px;
-    color: #fff;
+    color: var(--sidebar-text);
     font-size: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -142,7 +166,7 @@ h1 {
 .sidebar .nav-links li a .link_name{
     font-size: 18px;
     font-weight: 400;
-    color: #fff; 
+    color: var(--sidebar-text);
     transition: 0.3s ease;
     transition-delay: 0.1s;
 }
@@ -157,7 +181,7 @@ h1 {
 .sidebar .nav-links li .sub-menu{
     padding: 6px 6px 14px 80px;
     margin-top: -10px;
-    background: #1d1b31;
+    background: var(--sidebar-bg);
     display: none;
 }
 
@@ -166,16 +190,38 @@ h1 {
 
 }
 
+.sidebar .nav-links li .sub-menu{
+    padding: 6px 0 14px 0;
+    margin-top: -10px;
+    background: var(--sidebar-bg);
+    display: none;
+}
+
 .sidebar .nav-links li .sub-menu a{
-    color: #fff;
+    color: var(--sidebar-text);
     font-size: 15px;
-    padding: 5px 0;
     white-space: nowrap;
     opacity: 0.6;
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 8px 6px 8px 80px;
 }
 
 .sidebar .nav-links li .sub-menu a:hover{
+    opacity: 1;
+    background: var(--hover-bg);
+}
+
+.sidebar.close .nav-links li .sub-menu a{
+    display: block;
+    padding: 5px 10px;
+    margin: 0;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.sidebar.close .nav-links li .sub-menu a:hover{
+    background: var(--hover-bg);
     opacity: 1;
 }
 
@@ -190,6 +236,7 @@ h1 {
     opacity: 0;
     display: block;
     pointer-events: none;
+    min-width: 150px;
 }
 
 .sidebar.close .nav-links li:hover .sub-menu{
@@ -247,7 +294,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #1d1b31;
+    background: var(--profile-bg);
     padding: 6px 0;
     transition: all 0.5s ease;
 }
@@ -270,10 +317,9 @@ h1 {
     object-fit: cover;
     border-radius: 16px;
     margin: 0 14px 0 12px;
-    background: #1d1b31;
+    background: var(--sidebar-bg);
     padding: 10px;
     margin: 0 14px 0 12px;
-    background: #1d1b31;
     transition: all 0.5s ease;
 }
 
@@ -294,7 +340,7 @@ h1 {
 .sidebar .profile-details .logoutButton,
 .sidebar .profile-details .profile_name,
 .sidebar .profile-details .job{
-    color: #fff;
+    color: var(--sidebar-text);
     opacity: 1;
     pointer-events: auto;
     transition: opacity 0.3s ease 0.3s;
@@ -307,7 +353,8 @@ h1 {
 
 .home-section{
     position: relative;
-    background: #E4E9F7;
+    background: var(--home-bg);
+    color: var(--home-text);
     height: 100vh;
     left: 260px;
     width: calc(100% - 260px);
@@ -328,7 +375,8 @@ h1 {
 
 .home-section .home-content .bx-menu,
 .home-section .home-content .text{
-    color: #11101d;
+    background: var(--home-bg);
+    color: var(--home-text);
     font-size: 35px;
 }
 
@@ -352,6 +400,74 @@ h1 {
 }
 
 .profile-details .logoutButton:hover{
-   background: #11101d;;
+   background: var(--hover-button);
    border-radius: 5px;
+}
+
+.sidebar .nav-links li a .link_name,
+.sidebar .profile-details .profile_name,
+.sidebar .profile-details .job,
+.sidebar .profile-details .logoutButton {
+    color: var(--sidebar-text);
+}
+
+.home-section {
+    background: var(--home-bg);
+    color: var(--home-text);
+}
+
+.sidebar .nav-links li > a{
+    position: relative;
+}
+
+.sidebar .nav-links li:not(:has(.sub-menu)) > a:hover,
+.sidebar .nav-links li:not(:has(.sub-menu)) > .icon-links:hover{
+    background: var(--hover-bg);
+}
+
+.sidebar .nav-links li:has(.sub-menu) > a:hover,
+.sidebar .nav-links li:has(.sub-menu) > .icon-links:hover{
+    background: var(--hover-bg);
+}
+
+.sidebar .nav-links li .sub-menu a:hover{
+    background: var(--hover-bg) !important;
+    opacity: 1;
+    position: relative;
+    z-index: 10;
+    
+}
+
+.sidebar, 
+.sidebar .nav-links li .sub-menu, 
+.sidebar.close .nav-links li .sub-menu.blank,
+.sidebar .profile-details,
+.home-section {
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+.sidebar {
+    transition: width 0.5s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.sidebar.close {
+    width: 78px;
+    transition: width 0.5s ease, background 0.3s ease, color 0.3s ease;
+}
+
+
+.sidebar .nav-links li .sub-menu,
+.sidebar.close .nav-links li .sub-menu.blank {
+    transition: background 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
+
+.sidebar .profile-details {
+    transition: width 0.5s ease, background 0.3s ease, color 0.3s ease;
+}
+
+
+.home-section {
+    transition: left 0.5s ease, width 0.5s ease, background 0.3s ease, color 0.3s ease;
 }

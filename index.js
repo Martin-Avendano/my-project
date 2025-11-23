@@ -45,4 +45,23 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href = "index.html";
         });
     }
+
+    const themeToggle = document.getElementById("themeToggle");
+
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        
+        // Optionally save preference in localStorage
+        if(document.body.classList.contains("dark-mode")){
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+    });
+
+    // Load preference on page load
+    if(localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+
 });
