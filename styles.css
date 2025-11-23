@@ -1,0 +1,23 @@
+body {
+    background: linear-gradient(135deg, #111855, #6b7280);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+form {
+    border-radius: 12px;
+}
+
+h1 {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
