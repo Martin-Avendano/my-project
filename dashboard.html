@@ -11,7 +11,7 @@
     
     <title>Document</title>
 </head>
-<body>
+<body >
     <div class="sidebar">
         <div class="logo-details">
             <i class='bx  bx-coin'></i> 
@@ -121,18 +121,18 @@
                     </ul>
             </li>  
             
-        <li>
+        <li>    
         <div class="profile-details">
             <div class="profile-content">
                 <img src = "images/Profile.png" alt="profile";>
             </div>
-
-        
             <div class="name-job">
                 <div class="profile_name">Martin</div>
                 <div class="job">Web Designer</div>
             </div>
-            <i class='bx  bx-arrow-out-left-stroke-circle-half'></i> 
+            <button class = "logoutButton" id = "goToLogin">
+                <i class='bx  bx-arrow-out-left-stroke-circle-half'></i> 
+            </button>
         </div>
         </li>
     </ul>
@@ -145,23 +145,7 @@
         </div>
     </section>
 
-    <script> 
-        let arrow = document.querySelectorAll(".arrow");
-        for(var i = 0; i < arrow.length; i++) {
-            arrow[i].addEventListener("click",(e)=>
-            {
-                let arrowParent = e.target.parentElement.parentElement;
-                
-                arrowParent.classList.toggle("showMenu");
-            });
-            }
+    <script src="index.js"></script>
 
-            let sidebar = document.querySelector(".sidebar");
-            let sidebarBtn = document.querySelector(".bx-menu");
-            console.log(sidebarBtn)
-            sidebarBtn.addEventListener("click", ()=>{
-                sidebar.classList.toggle("close");
-            });
-    </script>
 </body>
 </html>

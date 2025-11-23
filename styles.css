@@ -249,7 +249,7 @@ h1 {
     justify-content: space-between;
     background: #1d1b31;
     padding: 6px 0;
-    transition: all 0.4s ease;
+    transition: all 0.5s ease;
 }
 
 .sidebar.close .profile-details{
@@ -280,20 +280,26 @@ h1 {
 .sidebar.close .profile-details img{
     padding: 10px;
 }
+    
 
+.sidebar.close .profile-details .logoutButton,
+.sidebar.close .profile-details .profile_name,
+.sidebar.close .profile-details .job{
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+
+.sidebar .profile-details .logoutButton,
 .sidebar .profile-details .profile_name,
 .sidebar .profile-details .job{
     color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    white-space: nowrap;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease 0.3s;
 }
 
-.sidebar.close .profile-details i,
-.sidebar.close .profile-details .profile_name,
-.sidebar.close .profile-details .job{
-    display: none;
-}
 
 .sidebar .profile-details .job{
     font-size: 12px;
@@ -333,4 +339,19 @@ h1 {
 .home-section .home-content .text{
     font-size: 26px;
     font-weight: 600;
+}
+
+.profile-details .logoutButton{
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-details .logoutButton:hover{
+   background: #11101d;;
+   border-radius: 5px;
 }
