@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Boxicons CDN Link -->
+     
+    <link href='https://cdn.boxicons.com/3.0.4/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/3.0.4/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx  bx-coin'></i> 
+            <span class="logo_name">
+                Budget
+            </span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#" class="active">
+                    <i class='bx  bx-grid'></i> 
+                    <span class="link_name">Dashboard</span>
+                </a>
+                    <ul class="sub-menu blank">
+                    <li><a class = "link_name" href = "#"> Category</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-links">
+                    <a href="#">
+                        <i class='bx  bx-form'></i> 
+                        <span class="link_name">Category</span>
+                    </a>
+                    <i class='bx  bx-caret-down arrow'></i> 
+                </div>
+                <ul class="sub-menu">
+                    <li><a class = "link_name" href = "#"> Category</a></li>
+                    <li><a href = "#"> HTML & CSS</a></li>
+                    <li><a href = "#"> Javascript</a></li>
+                    <li><a href = "#"> PHP & MySql</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-links">
+                    <a href="#">
+                        <i class='bx  bx-bookmark-alt'></i> 
+                        <span class="link_name">Posts</span>
+                    </a>
+                    <i class='bx  bx-caret-down arrow'></i> 
+                </div>
+                <ul class="sub-menu">
+                    <li><a class = "link_name" href = "#"> Posts</a></li>
+                    <li><a href = "#"> Web design</a></li>
+                    <li><a href = "#"> Card design</a></li>
+                    <li><a href = "#"> Login form</a></li>
+                </ul>
+            </li>
+            <li>
+                    <a href="#">
+                        <i class='bx  bx-vertical-align-bottom'></i> 
+                        <span class="link_name">Analytics</span>
+                    </a>
+                        <ul class="sub-menu blank">
+                        <li><a class = "link_name" href = "#"> Analytics</a></li>
+                    </ul>
+                </li>
+            <li>
+                    <a href="#">
+                        <i class='bx  bx-chart-line'></i>  
+                        <span class="link_name">Chart</span>
+                    </a>
+                        <ul class="sub-menu blank">
+                        <li><a class = "link_name" href = "#"> Chart</a></li>
+                    </ul>
+            </li>  
+            <li>
+                <div class="icon-links">
+                    <a href="#">
+                        <i class='bx  bx-plug-connect'></i> 
+                        <span class="link_name">Plugins</span>
+                    </a>
+                    <i class='bx  bx-caret-down arrow'></i> 
+                </div>
+                <ul class="sub-menu">
+                    <li><a class = "link_name" href = "#"> Plugins</a></li>
+                    <li><a href = "#"> UI Face</a></li>
+                    <li><a href = "#"> Pigments</a></li>
+                    <li><a href = "#"> Box Icons</a></li>
+                </ul>
+            </li>
+            <li>
+                    <a href="#">
+                        <i class='bx  bx-compass'></i> 
+                        <span class="link_name">Explore</span>
+                    </a>
+                        <ul class="sub-menu blank">
+                        <li><a class = "link_name" href = "#"> Explore</a></li>
+                    </ul>
+            </li>  
+            <li>
+                    <a href="#">
+                        <i class='bx  bx-history'></i> 
+                        <span class="link_name">History</span>
+                    </a>
+                        <ul class="sub-menu blank">
+                        <li><a class = "link_name" href = "#"> History</a></li>
+                    </ul>
+            </li>  
+
+            <li>
+                    <a href="#">
+                        <i class='bx  bx-cog'></i> 
+                        <span class="link_name">Settings</span>
+                    </a>
+                        <ul class="sub-menu blank">
+                        <li><a class = "link_name" href = "#"> Settings</a></li>
+                    </ul>
+            </li>  
+            
+        <li>
+        <div class="profile-details">
+            <div class="profile-content">
+                <img src = "images/Profile.png" alt="profile";>
+            </div>
+
+        
+            <div class="name-job">
+                <div class="profile_name">Martin</div>
+                <div class="job">Web Designer</div>
+            </div>
+            <i class='bx  bx-arrow-out-left-stroke-circle-half'></i> 
+        </div>
+        </li>
+    </ul>
+    </div>
+
+    <script> 
+        let arrow = document.querySelectorAll(".arrow");
+        for(var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click",(e)=>
+            {
+                let arrowParent = e.target.parentElement.parentElement;
+                console.log(arrowParent)
+                arrowParent.classList.toggle("showMenu");
+            });
+            }
+    </script>
+</body>
+</html>
